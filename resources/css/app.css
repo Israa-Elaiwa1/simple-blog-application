@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* snackbar */
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 24px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    transform: translateY(20px);
+}
+
+.snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.snackbar.success {
+    background-color: #8ac68d;
+}
+
+.snackbar.error {
+    background-color: #e57373;
+}
+
+.snackbar.info {
+    background-color: #64b5f6;
+}
+
+.snackbar.warning {
+    background-color: #ffb74d;
+}
+
+.snackbar a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.snackbar a:hover {
+    color: #ddd;
+}
+
+.snackbar .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.snackbar .close-btn:hover {
+    opacity: 1;
+}
+/* post */
+.single-post-container{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.add-post {
+    background-color:rgb(188,74,75)
+}
+
+.container {
+    margin-top: 60px;
+}
+
+.post-heading{
+    margin-bottom:30px
+}
+
+.post-title {
+   font-size:32px;
+}
+
+.date{
+    font-weight: 300;
+}
+
+.comment-icon {
+    justify-content:space-between
+}
+
+.comment-box {
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .single-post-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
